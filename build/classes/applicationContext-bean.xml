@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Action bean -->
+	<bean id="loginAction" class="com.sharing.action.LoginAction"
+		scope="prototype"></bean>
+
+	<bean id="registerAction" class="com.sharing.action.RegisterAction"
+		scope="prototype"></bean>
+
+	<bean id="joinDetailAction" class="com.sharing.action.JoinDetailAction"
+		scope="prototype"></bean>
+
+	<bean id="addressAction" class="com.sharing.action.AddressAction"
+		scope="prototype"></bean>
+
+	<bean id="carAction" class="com.sharing.action.CarAction" scope="prototype"></bean>
+
+	<bean id="updateIcon" class="com.sharing.action.UploadIcon" scope="prototype"></bean>
+
+	<bean id="groupAction" class="com.sharing.action.GroupAction"></bean>
+
+
+	<!-- Service bean -->
+	<bean id="loginService" class="com.sharing.service.impl.LoginServiceImpl"></bean>
+
+	<bean id="registerService" class="com.sharing.service.impl.RegisterServiceImpl"></bean>
+
+	<bean id="addressService" class="com.sharing.service.impl.AddressServiceImpl"></bean>
+
+	<bean id="joinDetailService" class="com.sharing.service.impl.JoinDetailServiceImpl"></bean>
+
+	<bean id="updateIconService" class="com.sharing.service.impl.UpdateIconServiceImpl"></bean>
+
+	<bean id="groupService" class="com.sharing.service.impl.GroupServiceImpl"></bean>
+
+	<!-- Dao bean -->
+	<bean id="loginDao" class="com.sharing.dao.impl.LoginDaoImpl"></bean>
+
+	<bean id="registerDao" class="com.sharing.dao.impl.RegisterDaoImpl"></bean>
+
+	<bean id="addressDao" class="com.sharing.dao.impl.AddressDaoImpl"></bean>
+
+	<bean id="joinDetailDao" class="com.sharing.dao.impl.JoinDetaliDaoImpl"></bean>
+
+	<bean id="updateIconDao" class="com.sharing.dao.impl.UpdateIconDaoImpl"></bean>
+
+	<bean id="groupDao" class="com.sharing.dao.impl.GroupDaoImpl"></bean>
+
+	<bean id="group" class="com.sharing.entities.Groups"></bean>
+	<!-- Java bean <bean id="address" class="com.sharing.entities.Address"></bean> 
+		<bean id="joinDetail" class="com.sharing.entities.JoinDetail" scope="prototype"></bean> 
+		<bean id="icon" class="com.sharing.entities.Icon"></bean> <bean id="addressDto" 
+		class="com.sharing.entities.dto.AddressDto"></bean> <bean id="loginDto" class="com.sharing.entities.dto.LoginDto"></bean> 
+		<bean id="registerDto" class="com.sharing.entities.dto.RegisterDto"></bean> 
+		<bean id="joinDetailDto" class="com.sharing.entities.dto.JoinDetailDto" scope="prototype"></bean> -->
+
+	<!-- Others bean -->
+	<bean id="SessionUtil" class="com.sharing.utils.SessionUtil"></bean>
+</beans>

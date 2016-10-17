@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-9 22:23:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sharing.entities.Groups" table="GROUPS">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="groupId" type="java.lang.Integer">
+            <column name="GROUPID" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+        </property>
+        <property name="isDrived" type="boolean" access="field">
+            <column name="ISDRIVED" />
+        </property>
+    </class>
+</hibernate-mapping>

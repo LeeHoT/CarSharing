@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-2 22:02:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sharing.entities.Car" table="CAR">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+        </property>
+        <property name="brand" type="java.lang.String">
+            <column name="BRAND" />
+        </property>
+        <property name="model" type="java.lang.String">
+            <column name="MODEL" />
+        </property>
+        <property name="licenseNum" type="java.lang.String">
+            <column name="LICENSENUM" />
+        </property>
+        <property name="motorcycleType" type="java.lang.String">
+            <column name="MOTORCYCLETYPE" />
+        </property>
+        <property name="drivingLicenseNum" type="java.lang.String">
+            <column name="DRIVINGLICENSENUM" />
+        </property>
+        <property name="registrationNum" type="java.lang.String">
+            <column name="REGISTRATIONNUM" />
+        </property>
+        <property name="expectPeopleNum" type="java.lang.Integer">
+            <column name="EXPECTPEOPLENUM" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-2 22:02:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sharing.entities.JoinDetail" table="JOINDETAIL">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+        </property>
+        <property name="startingPoint" type="java.lang.String">
+            <column name="STARTINGPOINT" />
+        </property>
+        <property name="terminalPoint" type="java.lang.String">
+            <column name="TERMINALPOINT" />
+        </property>
+        <property name="goOff_first" type="java.lang.String">
+            <column name="GOOFF_FIRST" />
+        </property>
+        <property name="goOff_second" type="java.lang.String">
+            <column name="GOOFF_SECOND" />
+        </property>
+        <property name="arrivalTime_first" type="java.lang.String">
+            <column name="ARRIVALTIME_FIRST" />
+        </property>
+        <property name="arrivalTime_second" type="java.lang.String">
+            <column name="ARRIVALTIME_SECOND" />
+        </property>
+        <property name="participateTime_first" type="java.lang.String">
+            <column name="PARTICIPATETIME_FIRST" />
+        </property>
+        <property name="participateTime_second" type="java.lang.String">
+            <column name="PARTICIPATETIME_SECOND" />
+        </property>
+    </class>
+</hibernate-mapping>

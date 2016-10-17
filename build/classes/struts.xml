@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<!-- 设置为开发模式 -->
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<!-- 全局错误结果集 -->
+		<global-results>
+			<result name="error">/jsp/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+
+		<action name="*AddressAction" class="addressAction" method="{1}Address">
+			<result name="success">join.jsp</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="addAddressAction" class="addressAction" method="addAddress">
+			<result name="success" type="chain">
+				<param name="actionName">selectAddressAction</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="deleteAddressAction" class="addressAction"
+			method="deleteAddress">
+			<result name="success" type="chain">
+				<param name="actionName">selectAddressAction</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="*JoinDetailAction" class="joinDetailAction"
+			method="{1}JoinDetail">
+			<result name="success">/joinDetail.jsp</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="addJoinDetailAction" class="joinDetailAction"
+			method="addJoinDetail">
+			<result name="success" type="chain">
+				<param name="actionName">divideGroupAction</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+
+		<action name="deleteJoinDetailAction" class="joinDetailAction"
+			method="deleteJoinDetail">
+			<result name="success" type="chain">
+				<param name="actionName">selectJoinDetailAction</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="divideGroupAction" class="groupAction" method="divideGroup">
+			<result name="success" type="chain">
+				<param name="actionName">selectGroupAction</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="selectGroupAction" class="groupAction" method="selectGroupByUserId">
+			<result name="success">/group.jsp</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+		
+		<action name="deleteGroupAction" class="groupAction"
+			method="deleteGroup">
+			<result name="success" type="chain">
+				<param name="actionName">selectGroupAction</param>
+				<param name="namespace">/</param>
+			</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="loginAction" class="loginAction" method="login">
+			<result name="success">/jsp/success.jsp</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="registerAction" class="registerAction" method="register">
+			<result name="success">/index.jsp</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+		<action name="updateIcon" class="updateIcon">
+			<result name="success">/index.jsp</result>
+			<result name="input">/jsp/error.jsp</result>
+		</action>
+
+
+	</package>
+
+
+</struts>
